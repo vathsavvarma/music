@@ -1,0 +1,37 @@
+::before,
+::after {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.main-page{
+    display: grid;
+    place-items: center;
+}
+
+.box-container{
+    width: 20rem;
+    height: 30rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    text-align: center;
+    font-family: 'Flamenco', cursive;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.controls{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 4rem;
+}
+
