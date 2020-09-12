@@ -1,19 +1,25 @@
-const vathmusic = document.querySelector('audio');
-const play = document.getElementById('play');
+var vathmusic = document.querySelector('audio');
+var play = document.getElementById('play');
+var varma = 2;
 //yooo
 
-play.addEventListener("click", ()=>{
-    
-    var click = 1;
+function go(){
     vathmusic.play();
     play.classList.replace("fa-play", "fa-pause");
+    varma = 1;
+}
 
-    if( click % 2 !== 0){
-        play.addEventListener("click", ()=>{
-            vathmusic.pause();
-            play.classList.replace("fa-pause", "fa-play");
-            click++;
-            console.log(click);
-        });
-    } 
+function wait(){
+    vathmusic.pause();
+    play.classList.replace("fa-pause", "fa-play");
+    varma = 2;
+}
+
+play.addEventListener("click", ()=>{
+    if ( varma === 2){
+        go();
+    }else{
+        wait();
+    }
 });
+
